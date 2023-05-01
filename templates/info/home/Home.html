@@ -1,0 +1,16 @@
+{% extends 'info/base/Base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'info/home/home.css' %}"> 
+    {{ block.super }}
+{% endblock styles %}
+
+{% block page_content %} 
+
+    {% include 'info/home/Header.html' %}
+    
+    <div class="home">
+        {{ content }}
+    </div>
+{% endblock page_content %}

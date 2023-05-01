@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: HeadingFont;
+    src: url("../font/h_font.otf") format("opentype");
+}
+
+@font-face {
+    font-family: ParagraphFont;
+    src: url("../font/p_font.otf") format("opentype");
+}
+
+/* ---- Base styling for info app ------ */
+
+:root {
+    /* color themes */
+    --main-color: #0072ce;
+    --shade-color-1: #005da8;
+    --shade-color-2: #0079db;
+    --shade-color-3: #0064b5;
+    --shade-color-4: #0c85e8;
+    --shade-color-5: #006bc2;
+    --shade-color-6: #1892f5;
+    --shade-color-7: #004C97;
+    --accent-color-white: #ffffff;
+    --accent-color-green: #73ffb2;
+    --accent-color-yellow: #ffee80;
+
+    /* font themes */
+    --title-font-family: HeadingFont, sans-serif;
+    --body-font-family: ParagraphFont, sans-serif;
+    --body-font-size: 1rem;
+    --body-font-weight: 400;
+    --body-line-height: 1.5;
+    --body-color: #212529;
+    --body-bg: #fff;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    :root {
+        scroll-behavior: smooth;
+    }
+}
+
+body {
+    margin: 0;
+    background: #fafafa;
+    color: #333333;
+    height: 150vh;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size);
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
+    color: var(--body-color);
+    text-align: var(--body-text-align);
+    background-color: var(--body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
