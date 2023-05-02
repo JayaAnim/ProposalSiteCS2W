@@ -26,3 +26,18 @@ class BaseListView(Base, ListView):
 
 class BaseCreateView(Base, CreateView):
     pass
+
+class Section(Base):
+    template_name = 'info/base/Section.html'
+    shaded = 1
+    button = False
+    text = ""
+    title = ""
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['shaded'] = self.shaded
+        context['button'] = self.button
+        context['text'] = self.text
+        context['title'] = self.title
+        return context

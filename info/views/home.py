@@ -8,3 +8,5 @@ class Home(BaseTemplateView):
         context = super().get_context_data(**kwargs)
         context['content'] = 'Home'
         return context
+    
+

@@ -130,10 +130,6 @@
   transition: all 200ms linear;
 }
 
-.nav-apply-item {
-  position: relative;
-}
-
 .nav-item:after {
   position: absolute;
   bottom: -5px;
@@ -159,36 +155,6 @@
   display: none;
 }
 
-.nav-apply-background {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  background: red;
-  transition: all 100ms linear;
-}
-
-.nav-apply-background:hover {
-  height: 60px;
-  width: 60px;
-  cursor: pointer;
-}
-
-.nav-apply-link {
-  font-family: var(--body-font-family);
-  font-size: var(--body-font-size);
-  font-weight: var(--body-font-weight);
-  color: var(--accent-color-white);
-  pointer-events: none !important;
-  position: relative;
-  padding: 5px 0 !important;
-  display: inline-block;
-  background-color: transparent;
-}
-
 .nav-item.active .nav-link {
   color: #777 !important;
 }
@@ -196,10 +162,6 @@
 
 
 @media (max-width: 991px) {
-
-  h1 {
-    font-size: 38px;
-  }
 
   .nav-item:after {
     display: none;
@@ -224,53 +186,9 @@
     background-color: #fff;
   }
 
-  .nav-item::before {
-    background-color: #fff;
-  }
-
   .nav-item {
     position: relative;
     transition: all 200ms linear;
-    background: rgb(24,146,245);
-    background: linear-gradient(175deg, rgba(24,146,245,1) 28%, rgba(0,93,168,1) 64%);
-  }
-
-  .nav-apply-item:after {
-    display: none;
-  }
-
-  .nav-apply-item-seperator {
-    display: block;
-    height: 4px;
-    margin: 0;
-    background: none;
-  }
-
-  .nav-apply-item::before {
-    position: absolute;
-    display: block;
-    top: 15px;
-    left: 0;
-    width: 11px;
-    height: 1px;
-    content: "";
-    border: none;
-    background-color: #fff;
-  }
-
-  .nav-apply-item::before {
-    background-color: #fff;
-  }
-
-  .nav-apply-item {
-    position: relative;
-    transition: all 200ms linear;
-    background: rgb(24,146,245);
-    background: linear-gradient(175deg, rgba(24,146,245,1) 28%, rgba(0,93,168,1) 64%);
-  }
-
-  .nav-apply-background {
-    display: none;
   }
 
 }

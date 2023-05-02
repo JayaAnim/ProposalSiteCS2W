@@ -22,6 +22,7 @@
     --shade-color-5: #006bc2;
     --shade-color-6: #1892f5;
     --shade-color-7: #004C97;
+    --shade-color-8: #FFFFF7;
     --accent-color-white: #ffffff;
     --accent-color-green: #73ffb2;
     --accent-color-yellow: #ffee80;
@@ -61,3 +62,28 @@ body {
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
+
+h1 {
+    color: var(--accent-color-white);
+    font-family: var(--title-font-family);
+    font-size: 5em;
+    font-weight: bold;
+}
+
+h2 {
+    color: var(--accent-color-white);
+    font-family: var(--title-font-family);
+    font-size: 2em;
+    font-weight: normal;
+}
+
+h3 {
+    color: var(--accent-color-white);
+    font-family: var(--title-font-family);
+    font-size: 1em;
+    font-weight: normal;
+}
+
+
+
+

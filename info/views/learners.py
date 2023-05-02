@@ -1,7 +1,7 @@
 #Learners page view
 from .base import *
 
-class Learneres(BaseTemplateView):
+class Learners(BaseTemplateView):
     template_name = 'info/learners/Learners.html'
 
     def get_context_data(self, **kwargs):
