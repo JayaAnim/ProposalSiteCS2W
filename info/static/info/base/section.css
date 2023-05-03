@@ -1,15 +1,21 @@
-.section-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 6rem;
+.info-section-title {
+    color: var(--shade-color-7);
+    font-family: var(--title-font-family);
+    font-size: 2em;
+    font-weight: normal;
 }
 
-.section-title-container {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    justify-content:center;
-    align-items: center;
+.info-section-text-wrapper {
+    max-width: 900px;
+}
+
+.info-section-text {
+    color: var(--body-color);
+    font-family: var(--body-font-family);
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.info-section-light {
+    background: var(--shade-color-8);
 }

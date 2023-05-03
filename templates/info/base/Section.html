@@ -1,27 +1,26 @@
 {% load static %} 
 
+<link rel="stylesheet" type="text/css" href="{% static 'info/base/section.css' %}">
 
-
-
-
-<!--
-<link rel="stylesheet" type="text/css" href="{% static 'info/base/base.css' %}">
-
-<div class="row w-100">
-    <div class="section-container">
-        <div class="section-sub-container">
-
+<div class="row {% block section_style %}{% endblock section_style %}">
+    <div class="col pb-4 pt-4">
+        {% block has_title %}
+        <div class="col d-flex justify-content-center pt-2">
+            <h3 class="info-section-title"> {% block section_title %}{% endblock section_title %} </h1>
         </div>
-        <div class="section-sub-container">
-
+        {% endblock has_title %}
+        {% block has_text %}
+        <div class="col d-flex justify-content-center pt-2">
+            <div class="info-section-text-wrapper">
+                <p class="info-section-text"> {% block section_text %}{% endblock section_text %} </p>
+            </div>
+        </div> 
+        {% endblock has_text %}
+        {% block has_content %} 
+        <div class="col d-flex justify-content-center pt-2">
+            {% block section_content %}{% endblock section_content %}
         </div>
-        <div class="section-sub-container">
+        {% endblock has_content %}
 
-        </div>
-        <div class="section-sub-container">
-
-        </div>
     </div>
 </div>
-
--->
