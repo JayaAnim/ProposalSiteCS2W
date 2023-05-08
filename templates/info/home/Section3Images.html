@@ -1,0 +1,20 @@
+{% extends 'info/base/ImageSlider.html' %}
+{% load static %}
+
+{% block carousel_images %}
+    <div class="carousel-item active" data-bs-interval="2500">
+        <img src="{% static 'info/img/program-impact-certifications-offered.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="1750">
+        <img src="{% static 'info/img/program-impact-education-value.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="1750">
+        <img src="{% static 'info/img/program-impact-employers.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="1750">
+        <img src="{% static 'info/img/program-impact-work-roles.png' %}" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item" data-bs-interval="1750">
+        <img src="{% static 'info/img/program-impact-trained-professionals.png' %}" class="d-block w-100" alt="...">
+    </div>
+{% endblock carousel_images %}

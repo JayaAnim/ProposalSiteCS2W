@@ -1,21 +1,52 @@
-.info-card-slider-container {
-    width: 100%;
-    max-width: 940px;
-    background: blue;
+.swiper-container-thin {
+    width: 600px;
+    height: 250px;
+    border-radius: 25px;
+}
+
+swiper-slide {
     display: flex;
-    flex-direction: row;
+    color: var(--body-color);
+    font-family: var(--body-font-family);
+    font-weight: normal;
+    background: var(--shade-color-9);
+    overflow: hidden;
 }
 
-.info-card {
-    margin: 0 10px;
-    width: 300px;
-    height: 300px;
-    background: blue;
+.swiper-slide-thin-img-placeholder {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--shade-color-9);
+
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 25%;
 }
 
-@media (max-width: 991px) {
-    .info-card-slider-container {
-        max-width: 940px;
-        padding: 0 8px;
-    }
+.swiper-slide-thin-img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: 100%;
+    object-fit: fill;
+    filter: brightness(80%);
+}
+
+.swiper-slide-thin-content-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 100%;
+    padding: 10px;
+}
+
+.swiper-slide-thin-text {
+    font-family: var(--body-font-family);
+    font-size: .75em;
+    font-weight: var(--body-font-weight);
+    line-height: var(--body-line-height);
 }

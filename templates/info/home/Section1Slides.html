@@ -1,0 +1,38 @@
+{% extends 'info/base/CardSlider.html' %}
+{% load static %}
+
+{% block slides %}
+    <swiper-slide>
+        <div class="swiper-slide-thin-img-placeholder">
+            <img class="swiper-slide-thin-img" src="{% static 'info/img/cybercrime.jpg' %}"/>
+        </div>
+        <div class="swiper-slide-thin-content-wrapper">
+            <p class="swiper-slide-thin-text">
+                The annual global cost of cybercrime damages is about $6 trillion and is expected to increase to $10.5 trillion by 2025. 
+                In 2020, reported financial losses from cybercrime in the U.S. cost over $4.1 billion, a 69% increase from 2019. Source: CyberSecurity Ventures, FBI
+            </p>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="swiper-slide-thin-img-placeholder">
+            <img class="swiper-slide-thin-img" src="{% static 'info/img/cybersecurity-workforce-gaps.jpg' %}"/>
+        </div>
+        <div class="swiper-slide-thin-content-wrapper">
+            <p class="swiper-slide-thin-text">
+                Currently, there are 3.5 million unfilled cybersecurity jobs globally and close to 600,000 nationally.
+                Source: CyberSecurity Ventures
+            </p>
+        </div>
+    </swiper-slide>
+    <swiper-slide>
+        <div class="swiper-slide-thin-img-placeholder">
+            <img class="swiper-slide-thin-img" src="{% static 'info/img/cybersecurity-training-needs.jpg' %}"/>
+        </div>
+        <div class="swiper-slide-thin-content-wrapper">
+            <p class="swiper-slide-thin-text">
+                Reportedly, 95% of all cybersecurity breaches are due to human error and 69% of organizations indicate that their cybersecurity teams are understaffed.
+                Source: IBM and ISACA
+            </p>
+        </div>
+    </swiper-slide>
+{% endblock slides %}

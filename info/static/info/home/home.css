@@ -120,4 +120,21 @@
 
 /* ---------------- End of Header Style -------------------- */
 
+/* --------------- Section Style ------------------- */
 
+.info-home-content-wrapper {
+    width: 900px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+    .info-home-content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+}

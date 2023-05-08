@@ -2,25 +2,35 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'info/base/section.css' %}">
 
-<div class="row {% block section_style %}{% endblock section_style %}">
-    <div class="col pb-4 pt-4">
+<div class="row w-100 m-0 pt-4 {% block section_style %}{% endblock section_style %}">
+    <div class="col pb-5 pt-5">
+
         {% block has_title %}
-        <div class="col d-flex justify-content-center pt-2">
-            <h3 class="info-section-title"> {% block section_title %}{% endblock section_title %} </h1>
+        <div class="col d-flex justify-content-center p-0">
+            <h3 class="info-section-title ms-2 text-center"> {% block section_title %}{% endblock section_title %} </h1>
         </div>
         {% endblock has_title %}
+
         {% block has_text %}
-        <div class="col d-flex justify-content-center pt-2">
-            <div class="info-section-text-wrapper">
+        <div class="col d-flex justify-content-center p-0">
+            <div class="info-section-text-wrapper ms-2">
                 <p class="info-section-text"> {% block section_text %}{% endblock section_text %} </p>
+                {% block section_image %}{% endblock section_image %}
             </div>
         </div> 
         {% endblock has_text %}
+
         {% block has_content %} 
-        <div class="col d-flex justify-content-center pt-2">
+        <div class="col d-flex justify-content-center p-0">
             {% block section_content %}{% endblock section_content %}
         </div>
         {% endblock has_content %}
+
+        {% block has_button %} 
+        <div class="col d-flex justify-content-center p-0 pt-4">
+            {% block section_button %}{% endblock section_button %}
+        </div>
+        {% endblock has_button %}
 
     </div>
 </div>

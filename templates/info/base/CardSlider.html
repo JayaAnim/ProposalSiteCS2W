@@ -2,7 +2,9 @@
 
 <link rel="stylesheet" type="text/css" href="{% static 'info/base/cardslider.css' %}">
 
-<div class="info-card-slider-container">
-    <div class="info-card"></div>
-    <div class="info-card"></div>
-</div>
+<swiper-container class="swiper-container-thin" navigation="true" pagination="true" keyboard="true" mousewheel="true" css-mode="true">
+    {% block slides %} 
+    {% endblock slides %}
+</swiper-container>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>

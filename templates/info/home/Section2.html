@@ -3,7 +3,7 @@
 
 <!--Section style-->
 {% block section_style %} 
-    info-section-light 
+    info-section-dark
 {% endblock section_style %}
 
 <!--Title section-->
@@ -12,7 +12,7 @@
 {% endblock has_title %}
 
 {% block section_title %} 
-    Cybersecurity Today: A Call to Action
+    CyberSkills2Work Responds to the Call
 {% endblock section_title %} 
 
 <!--Text section-->
@@ -27,16 +27,14 @@
     Cybersecurity analysts emphasize the need to take action on cybercriminals and develop a solid cyberdefense against computer crimes. 
     Having skilled cybersecurity professionals at the frontline of cyberdefense helps protect networks, devices, and data from unlawful internet activity. 
     According to <a href="https://www.cyberseek.org/" target="_blank">CyberSeek</a>, the U.S. has a shortfall of about 597,767 cybersecurity professionals. More skilled professionals are needed to tackle the nation’s top cybersecurity challenges:
-{% endblock section_text %}  
+{% endblock section_text %} 
 
-<!--Content section-->
-{% block has_content %} 
-    {{ block.super }} 
-{% endblock has_content %}
+{% block section_image %} 
+    <img class="info-section-image" src="{% static 'info/img/military-cybersecurity-person.jpg' %}"/>
+{% endblock section_image %}
 
-{% block section_content %} 
-    {% include 'info/home/Section1Slides.html' %}
-{% endblock section_content %}
+<!--No Content section-->
+{% block has_content %}{% endblock has_content %}
 
 <!--Button section-->
 {% block has_button %} 
