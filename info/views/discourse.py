@@ -33,8 +33,9 @@ class Testimonial(BaseTemplateView):
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['image_link'] = kwargs.get('image_link')
-        context['testimonial_name'] = kwargs.get('testimonial_name')
-        context['testimonial_position'] = kwargs.get('testimonial_position')
-        context['testimonial_text'] = kwargs.get('testimonial_text')
+        context['image_link'] = self.image_link
+        context['testimonial_name'] = self.testimonial_name
+        context['testimonial_position'] = self.testimonial_position
+        context['testimonial_text'] = self.testimonial_text
         return context
+    

@@ -129,6 +129,18 @@
     flex-wrap: nowrap;
 }
 
+.info-home-sub-title {
+    font-size: 1.3em;
+    font-family: var(--title-font-family);
+    font-weight: bold;
+}
+
+.info-home-content-text {
+    font-size: 1.25em;
+    font-family: var(--body-font-family);
+    font-weight: normal;
+}
+
 @media (max-width: 768px) {
     .info-home-content-wrapper {
         display: flex;

@@ -7,13 +7,14 @@
 {% endblock styles %}
 
 {% block page_content %} 
-    <script>console.log(" {{ testimonial_views }}");</script>
     <!--Home header-->
     {% include 'info/home/Header.html' %}
     <!--Home sections-->
     {% include 'info/home/Section1.html' %}
     {% include 'info/home/Section2.html' %}
     {% include 'info/home/Section3.html' %}
-    {% include 'info/home/Section4.html' %}
+    {% include 'info/home/Section4.html' with testimonials=testimonial_views %}
+    {% include 'info/home/Section5.html' %} 
+    
 
 {% endblock page_content %}

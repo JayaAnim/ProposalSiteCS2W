@@ -1,0 +1,57 @@
+{% extends 'info/base/Section.html' %}
+{% load static %}
+
+<!--Section style-->
+{% block section_style %} 
+    info-section-light
+{% endblock section_style %}
+
+<!--Title section-->
+{% block has_title %} 
+    {{ block.super }}
+{% endblock has_title %}
+
+{% block section_title %} 
+    Take Action! Join the CyberSkills2Work Community
+{% endblock section_title %} 
+
+<!--Text section-->
+{% block has_text %} 
+    {{ block.super }}
+{% endblock has_text %} 
+
+{% block section_text %} 
+    Join the fight against cybercrime. Support CyberSkills2Work and its efforts to strengthen the nation’s cybersecurity workforce with skilled individuals. 
+    Be a part of our collective group of learners, educational institutions, employers, and partners who are making a difference in cybersecurity.
+{% endblock section_text %}
+
+<!--Content section-->
+{% block has_content %}
+    {{ block.super }}
+{% endblock has_content %}
+
+{% block section_content %} 
+    <div class="info-home-content-wrapper ">
+        <div>
+            <h5 class="info-home-sub-title">Learners</h5>
+            <p class="info-home-content-text">
+                Do you have some IT or cybersecurity experience and want to further your career in the field? If you’re a transitioning military person, veteran or first responder, apply to CyberSkills2Work. 
+                Take our aptitude test to see what cybersecurity work role or career path is best for you. This program could be your free ticket to journey a long and rewarding career in cybersecurity.
+            </p>
+        </div>
+    </div>
+{% endblock section_content %} 
+
+<!--Button section-->
+{% block has_button %} 
+    {{ block.super }}
+{% endblock has_button %} 
+
+{% block section_button %} 
+    <button class="learn-more">
+        <span class="circle" aria-hidden="true">
+            <span class="icon arrow"></span>
+        </span>
+        <span class="button-text"> <a href="#">View More</a> </span>
+    </button>
+{% endblock section_button %}

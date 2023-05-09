@@ -69,7 +69,9 @@
 
 .navbar-toggler:active,
 .navbar-toggler:focus {
-  outline: none;
+  border-color: transparent !important;
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .navbar-toggler-icon {
@@ -197,6 +199,10 @@
   .nav-item {
     position: relative;
     transition: all 200ms linear;
+  } 
+
+  ul.navbar-nav {
+    margin-top: 10px;
   }
 
 }
