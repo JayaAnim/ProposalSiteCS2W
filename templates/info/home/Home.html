@@ -1,20 +1,12 @@
 {% extends 'info/base/Base.html' %}
 {% load static %}
 
-{% block styles %}
-    <link rel="stylesheet" type="text/css" href="{% static 'info/home/home.css' %}"> 
-    {{ block.super }}
-{% endblock styles %}
-
 {% block page_content %} 
     <!--Home header-->
     {% include 'info/home/Header.html' %}
     <!--Home sections-->
-    {% include 'info/home/Section1.html' %}
-    {% include 'info/home/Section2.html' %}
-    {% include 'info/home/Section3.html' %}
-    {% include 'info/home/Section4.html' with testimonials=testimonial_views %}
-    {% include 'info/home/Section5.html' %} 
-    
+    {% for section in sections %} 
+        {{ section }}
+    {% endfor %}
 
 {% endblock page_content %}

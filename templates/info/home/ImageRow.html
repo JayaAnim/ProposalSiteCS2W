@@ -1,0 +1,9 @@
+{% load static %}
+
+<div class="info-home-row mt-0 mt-md-4 mt-lg-4 mt-xl-4">
+    <img class="info-home-image" src="{% static '' %}{{row_image}}"/>
+    <div class="info-home-text-wrapper">
+        <h6 class="info-home-text-title">{{row_title}}</h6>
+        <p class="info-home-text">{{row_text|safe}}</p>
+    </div>
+</div>

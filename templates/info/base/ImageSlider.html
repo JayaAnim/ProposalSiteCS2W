@@ -1,11 +1,11 @@
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'info/base/imageslider.css' %}">
-
 <div class="info-carousel-container pt-3 pb-3">
     <div id="info-home-carousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            {% block carousel_images %}{% endblock carousel_images %}
+            {% for image in images %} 
+                {{ image }}
+            {% endfor %}
         </div>
     </div>
 </div>

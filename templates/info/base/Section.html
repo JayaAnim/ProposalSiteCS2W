@@ -1,36 +1,41 @@
 {% load static %} 
 
-<link rel="stylesheet" type="text/css" href="{% static 'info/base/section.css' %}">
-
-<div class="row w-100 m-0 pt-4 {% block section_style %}{% endblock section_style %}">
+<div class="row w-100 m-0 pt-4 {% if section_style == 'light' %} info-section-light {% else %} info-section-dark {% endif %}">
     <div class="col pb-5 pt-5">
 
-        {% block has_title %}
-        <div class="col d-flex justify-content-center p-0">
-            <h3 class="info-section-title ms-2 text-center"> {% block section_title %}{% endblock section_title %} </h1>
-        </div>
-        {% endblock has_title %}
-
-        {% block has_text %}
-        <div class="col d-flex justify-content-center p-0">
-            <div class="info-section-text-wrapper ms-2">
-                <p class="info-section-text"> {% block section_text %}{% endblock section_text %} </p>
-                {% block section_image %}{% endblock section_image %}
+        {% if section_title %} 
+            <div class="col d-flex justify-content-center p-0 pb-3">
+                <h3 class="info-section-title ms-2 text-center"> {{ section_title }} </h1>
             </div>
-        </div> 
-        {% endblock has_text %}
+        {% endif %}
 
-        {% block has_content %} 
-        <div class="col d-flex justify-content-center p-0">
-            {% block section_content %}{% endblock section_content %}
-        </div>
-        {% endblock has_content %}
+        {% if section_text %} 
+            <div class="col d-flex justify-content-center p-0 pt-3 pb-3">
+                <div class="info-section-text-wrapper ms-2">
+                    <p class="info-section-text"> {{ section_text|safe }} </p>
+                    {% if section_image %} 
+                        <img class="info-section-image" src="{% static '' %}{{section_image}}"/>
+                    {% endif %}
+                </div>
+            </div> 
+        {% endif %} 
 
-        {% block has_button %} 
-        <div class="col d-flex justify-content-center p-0 pt-4">
-            {% block section_button %}{% endblock section_button %}
-        </div>
-        {% endblock has_button %}
+        {% if section_content %}
+            <div class="col d-flex justify-content-center p-0 pt-3 pb-3 flex-wrap">
+                {{ section_content }}
+            </div>
+        {% endif %}
+
+        {% if section_button %} 
+            <div class="col d-flex justify-content-center p-0 pt-3 pb-3">
+                <button class="learn-more">
+                    <span class="circle" aria-hidden="true">
+                        <span class="icon arrow"></span>
+                    </span>
+                    <span class="button-text"> <a href="{{ section_button_link }}"> {{ section_button }} </a> </span>
+                </button>
+            </div>
+        {% endif %}
 
     </div>
 </div>

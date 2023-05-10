@@ -1,0 +1,5 @@
+{% load static %}
+
+<div class="carousel-item {% if image_active %} active {% endif %}" data-bs-interval="{{ image_interval }}">
+    <img src="{% static '' %}{{image_link}}" class="d-block w-100" alt="{{image_description}}">
+</div>

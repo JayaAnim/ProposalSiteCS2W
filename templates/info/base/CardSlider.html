@@ -1,10 +1,9 @@
 {% load static %} 
 
-<link rel="stylesheet" type="text/css" href="{% static 'info/base/cardslider.css' %}">
-
 <swiper-container class="swiper-container-thin" navigation="true" pagination="true" keyboard="true" mousewheel="true" css-mode="true">
-    {% block slides %} 
-    {% endblock slides %}
+    {% for card in cards %}
+        {{ card }}
+    {% endfor %}
 </swiper-container>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>

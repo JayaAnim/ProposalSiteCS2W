@@ -122,31 +122,57 @@
 
 /* --------------- Section Style ------------------- */
 
-.info-home-content-wrapper {
-    width: 900px;
+.info-home-row {
+    width: 950px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-.info-home-sub-title {
-    font-size: 1.3em;
-    font-family: var(--title-font-family);
-    font-weight: bold;
+.info-home-image {
+    height: auto;
+    width: 50%;
+    border-radius: 25px;
+    margin-right: 20px;
+    align-self: center;
 }
 
-.info-home-content-text {
-    font-size: 1.25em;
-    font-family: var(--body-font-family);
-    font-weight: normal;
+.info-home-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-home-text {
+    text-align: left;
+    color: var(--body-color);
+    font-size: .9em;
+}
+
+.info-home-text-title {
+    margin-top: 15px;
+    font-size: 1.3em;
+    font-weight: bold;
+    font-family: var(--title-font-family);
+    color: var(--shade-color-7);
 }
 
 @media (max-width: 768px) {
-    .info-home-content-wrapper {
+    .info-home-row {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+
+    .info-home-image {
+        height: auto;
+        width: 80%;
+        margin-top: 20px;
+        border-radius: 25px;
+        margin-right: 20px;
+        align-self: center;
     }
 }
