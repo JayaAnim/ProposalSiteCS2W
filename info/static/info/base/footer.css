@@ -1,0 +1,22 @@
+.info-footer-logo-container {
+    height: 150px;
+    width: 150px;
+}
+
+
+.info-footer-title {
+    font-family: var(--title-font-family);
+    font-weight: bold;
+}
+
+.info-footer-item:hover {
+    color: var(--accent-color-green) !important;
+}
+
+footer {
+    background: var(--shade-color-1);
+}
+
+.info-footer-base {
+    background: var(--shade-color-7);
+}
