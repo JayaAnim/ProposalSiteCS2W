@@ -2,6 +2,10 @@
 from .base import *
 from .discourse import Testimonial, testimonial_data
 
+""""
+This views file renders the static content for the homepage and passes the static content to the homepage view
+"""
+
 # ============================== Section 1 View/Content Views ============================== #
 
 class Card1(Card):
