@@ -1,0 +1,9 @@
+import '../styles/cardslider.css';
+import '../styles/discourse.css';
+import '../styles/footer.css';
+import '../styles/home.css';
+import '../styles/imageslider.css';
+import '../styles/navbar.css';
+import '../styles/section.css';
+import './navbar.js';
+import './cardslider.js';

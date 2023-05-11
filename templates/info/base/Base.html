@@ -1,16 +1,10 @@
-{% extends 'core/index.html' %}
+{% extends 'core/Base.html' %}
 {% load static %}
 
 {% block styles %} 
     {{ block.super }}
     <!--Template CSS-->
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/discourse.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/home.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/cardslider.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/imageslider.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/navbar.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/section.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'info/css/footer.css' %}">
+    <script src="{% static 'dist/info/bundle.js' %}"></script>
 {% endblock styles %}
 
 {% block body %}
@@ -22,13 +16,5 @@
     {% include 'info/base/Footer.html' %} 
 
 {% endblock body %}
-
-{% block scripts %} 
-    <!--Card Slider Script-->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
-    <!--Navbar script-->
-    <script src="{% static 'info/js/navbar.js' %}"></script>
-    {{ block.super }}
-{% endblock scripts %}
 
 

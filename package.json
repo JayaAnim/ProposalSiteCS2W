@@ -1,0 +1,33 @@
+{
+  "dependencies": {
+    "@popperjs/core": "^2.11.7",
+    "bootstrap": "^5.2.3",
+    "latest-version": "^7.0.0"
+  },
+  "name": "cybersite",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "css-loader": "^6.7.3",
+    "file-loader": "^6.2.0",
+    "style-loader": "^3.3.2",
+    "webpack": "^5.82.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack --watch --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JayaAnim/CyberSkills2Work.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JayaAnim/CyberSkills2Work/issues"
+  },
+  "homepage": "https://github.com/JayaAnim/CyberSkills2Work#readme",
+  "description": ""
+}

@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+
+        {% if page_title %}
+            <title>{{ page_title }}</title>
+        {% else %}
+            <title>Error</title>
+        {% endif %}
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        {% block styles %}  
+            <!-- Bootstrap Icons -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+            <!--Base CSS styles-->
+            <script src="{% static 'dist/core/bundle.js' %}"></script>
+        {% endblock styles %}
+
+        {% endblock head %}
+    </head>
+
+    <body class="container-fluid p-0">
+
+        <!--Body Page content-->
+        {% block body %} 
+
+        {% endblock body %}
+
+    </body>
+</html>
