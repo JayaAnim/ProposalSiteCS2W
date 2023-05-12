@@ -1,0 +1,12 @@
+{% extends 'info/base/Base.html' %}
+{% load static %}
+
+{% block page_content %} 
+
+<div class="mt-5">
+    {% for section in sections %} 
+        {{ section }}
+    {% endfor %}
+</div>
+
+{% endblock page_content %}

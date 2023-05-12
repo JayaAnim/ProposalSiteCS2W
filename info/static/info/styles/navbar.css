@@ -54,10 +54,8 @@
 }
 
 .navbar-nav {
-  padding-left: 35px;
-  padding-right: 35px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
