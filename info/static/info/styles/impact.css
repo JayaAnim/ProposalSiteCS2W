@@ -1,0 +1,34 @@
+/* map content css */
+
+.info-map-img {
+    display: block;
+    height: auto;
+    width: 65%
+}
+
+.info-impact-list-container li {
+    color: var(--shade-color-7);
+    font-family: var(--body-font-family);
+}
+
+ol[type="a"] li {
+    list-style-type: disc;
+  }
+
+.info-impact-main-uni {
+    color: var(--shade-color-6) !important;
+    font-weight: bold;
+}
+
+.info-impact-img {
+    width: 80%;
+    height: auto;
+    border-radius: 20px;
+}
+
+@media (max-width: 992px) {
+    .info-map-img {
+        width: 90%;
+    }
+
+}

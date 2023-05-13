@@ -5,7 +5,10 @@
 
 
 {% block page_content %} 
-    <div class="100vh bg-primary">
-        {{ content }}
-    </div>
+    {{ banner }}
+    
+    {% for section in sections %} 
+        {{ section }}
+    {% endfor %}
+
 {% endblock page_content %}

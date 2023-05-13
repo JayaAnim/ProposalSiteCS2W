@@ -1,43 +1,58 @@
 {% load static %}
 
-<div class="navigation-wrapper">
-    <div class="navigation-sub-wrapper">
-        <nav class="navbar navbar-expand-lg">
+<div class="navigation-wrap start-header start-style">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <!--Nav logo-->
+                    <a class="navbar-brand" href="/">
+                        <img src="{% static 'info/img/logo_white.png' %}" alt="">
+                    </a>
+                    <!--Nav collapse expand button-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-            <a class="navbar-brand m-0 p-0 ps-4" href="{% url 'info:Home' %}" class="logo" target="_self">
-                <img class="navbar-img" src="{% static 'info/img/logo_white.png' %}" alt="CyberSkills2Work logo">
-            </a>
-
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item ms-4 me-4">
-                        <a class="nav-link ms-3 ms-lg-0" href="#">About</a>
-                    </li>
-                    <hr class="nav-item-seperator"/>
-                    <li class="nav-item ms-4 me-4">
-                        <a class="nav-link ms-3 ms-lg-0" href="#">Learners</a>
-                    </li>
-                    <hr class="nav-item-seperator"/>
-                    <li class="nav-item ms-4 me-4">
-                        <a class="nav-link ms-3 ms-lg-0" href="#">Training Programs</a>
-                    </li>
-                    <hr class="nav-item-seperator"/>
-                    <li class="nav-item ms-4 me-4">
-                        <a class="nav-link ms-3 ms-lg-0" href="#">Contact Us</a>
-                    </li>
-                    <hr class="nav-item-seperator"/>
-                    <li class="nav-item ms-4 me-4">
-                        <a class="nav-link ms-3 ms-lg-0" href="#">Apply</a>
-                    </li>
-                    <hr class="nav-item-seperator"/>
-                    <li class="nav-item ms-4 me-4">
-                        <a class="nav-link ms-3 ms-lg-0" href="#">Register/Sign in</a>
-                    </li>
-                </ul>
+                    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                        <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                            <li class="nav-item dropdown pe-4 pe-lg-0 me-0 me-lg-5">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    About
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="{% url 'info:About' %}">About Us</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'info:Impact' %}">Program Impact</a></li>
+                                    <li><a class="dropdown-item" href="#">Employers Network</a></li>
+                                    <li><a class="dropdown-item" href="#">Institutions Network</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item dropdown pe-4 pe-lg-0 me-0 me-lg-5">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Learners
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Get Started</a></li>
+                                    <li><a class="dropdown-item" href="#">FAQ</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                                <a class="nav-link" href="#">Programs</a>
+                            </li>
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                                <a class="nav-link" href="#">Contact</a>
+                            </li>
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                                <a class="nav-link" href="#">Apply</a>
+                            </li>
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                                <a class="nav-link" href="#">Sign in</a>
+                            </li>
+                        </ul>
+                      </div>
+                </nav>
             </div>
-        </nav>
+        </div>
     </div>
 </div>
+

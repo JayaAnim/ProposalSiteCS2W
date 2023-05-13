@@ -1,0 +1,13 @@
+.info-body-wrapper {
+    margin-top: 65px;
+    width: 100vw;
+}
+
+.info-body-margin-block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 65px;
+    background: var(--shade-color-7);
+}

@@ -125,5 +125,17 @@ class Image(BaseTemplateView):
         context['image_description'] = self.image_description
         context['image_active'] = self.image_active
         return context 
+    
+class Banner(BaseTemplateView):
+    template_name = 'info/base/Banner.html'
+    image_link = None
+    banner_title = None
+    banner_sub_title = None
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['image_link'] = self.image_link
+        context['banner_title'] = self.banner_title
+        context['banner_sub_title'] = self.banner_sub_title
+        return context 
 

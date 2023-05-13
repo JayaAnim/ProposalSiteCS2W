@@ -85,9 +85,20 @@ h2 {
 h3 {
     color: var(--accent-color-white);
     font-family: var(--title-font-family);
-    font-size: 1em;
-    font-weight: normal;
+    font-weight: bold;
+    font-size: 1.75em;
 }
+
+h4 {
+    color: var(--accent-color-white);
+    font-family: var(--title-font-family);
+}
+
+h5 {
+    color: var(--accent-color-white);
+    font-family: var(--title-font-family);
+}
+
 
 button {
     position: relative;
@@ -178,4 +189,8 @@ button:hover .circle .icon.arrow {
 
 button:hover .button-text, button:hover .button-text a {
     color: #fff;
+}
+
+button.learn-more .button-text {
+    white-space: nowrap;
 }

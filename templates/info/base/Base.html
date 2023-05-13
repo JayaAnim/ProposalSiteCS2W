@@ -4,15 +4,16 @@
 {% block styles %} 
     {{ block.super }}
     <!--Template CSS-->
-    <script src="{% static 'dist/info/bundle.js' %}"></script>
+    <script src="{% static 'info/dist/bundle.js' %}"></script>
 {% endblock styles %}
 
 {% block body %}
-
     {% include 'info/base/Navbar.html' %}
-
-    {% block page_content %}{% endblock page_content %}
-
+    <!--here-->
+    <div class="info-body-margin-block"></div>
+    <div class="info-body-wrapper">
+        {% block page_content %}{% endblock page_content %}
+    </div>
     {% include 'info/base/Footer.html' %} 
 
 {% endblock body %}

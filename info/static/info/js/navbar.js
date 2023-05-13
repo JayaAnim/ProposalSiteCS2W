@@ -1,8 +1,9 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     "use strict";
   
     // Menu On Scroll
-    var header = document.querySelector(".navigation-wrapper");
+    var header = document.querySelector(".start-style");
     var lastScroll = 0;
   
     window.addEventListener('scroll', function () {
@@ -17,21 +18,4 @@ document.addEventListener('DOMContentLoaded', function() {
       lastScroll = scroll;
     });
   
-    // Menu On Hover
-  
-    var navItems = document.querySelectorAll('.nav-item');
-    var handleNavItemsHover = function (e) {
-      if (window.innerWidth > 991) {
-        var _d = e.target.closest('.nav-item');
-        _d.classList.add('show');
-        setTimeout(function () {
-          _d.classList[_d.matches(':hover') ? 'add' : 'remove']('show');
-        }, 1);
-      }
-    };
-  
-    for (var i = 0; i < navItems.length; i++) {
-      navItems[i].addEventListener('mouseenter', handleNavItemsHover);
-      navItems[i].addEventListener('mouseleave', handleNavItemsHover);
-    }
 });

@@ -1,1 +1,11 @@
+{% load static %}
 
+<link rel="stylesheet" type="text/css" href="{% static 'info/styles/banner.css' %}">
+
+
+<header class="info-banner" style="background-image: linear-gradient(to right bottom, rgba(24, 146, 245, 0.75), rgba(0, 76, 151, 0.75)), url({% static '' %}{{image_link}});">
+	<div class="info-banner-title-wrapper">
+        <h3 class="info-banner-title">{{ banner_title }}</h3>
+        <h5 class="info-banner-sub-title">{{ banner_sub_title }}</h5>
+	</div>
+</header>
