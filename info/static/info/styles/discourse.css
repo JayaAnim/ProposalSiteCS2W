@@ -25,12 +25,34 @@
     border-bottom: 1px solid black;
 }
 
+.info-testimonial-name {
+    color: var(--body-color);
+    font-family: var(--body-font-family);
+}
+
 .info-testimonial-text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 100%;
     padding: 5px;
+}
+
+.info-testimonial-row {
+    width: 950px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+    .info-testimonial-row {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {

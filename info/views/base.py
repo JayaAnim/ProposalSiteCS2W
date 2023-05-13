@@ -103,7 +103,7 @@ class ImageSlider(BaseTemplateView):
         context['images'] = rendered_images
         return context 
 
-#Reusable Image into be inserted into ImageSlider
+#Reusable Image to be inserted into ImageSlider
 #First Image used must have image_active set to True
 class Image(BaseTemplateView):
     """
@@ -126,7 +126,11 @@ class Image(BaseTemplateView):
         context['image_active'] = self.image_active
         return context 
     
+#Reusable Banner to be used at top of pages in absence of custome headers  
 class Banner(BaseTemplateView):
+    #image_link is relative link to image to be used as banner background
+    #banner_title is the main title to be used on banner
+    #banner_sub_title is the secondary title to be used under main title
     template_name = 'info/base/Banner.html'
     image_link = None
     banner_title = None

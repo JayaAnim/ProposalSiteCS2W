@@ -1,0 +1,23 @@
+.info-employers-list-seperator {
+    border-bottom: 1px solid #004C97;
+    height: 10px;
+    width: 60%;
+}
+
+.info-employers-list-title {
+    color: var(--shade-color-7);
+    font-family: var(--title-font-family);
+    font-size: 1.25em !important;
+    font-weight: normal;
+}
+
+.info-employers-list-text-wrapper {
+    width: 400px;
+}
+
+.info-employers-list-text {
+    color: var(--body-color);
+    font-family: var(--title-font-family);
+    font-size: 1em !important;
+    font-weight: normal;
+}

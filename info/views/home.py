@@ -1,6 +1,6 @@
 #Home page view
 from .base import *
-from .discourse import Testimonial, testimonial_data
+from .discourse import Testimonial, TestimonialRow, testimonial_data
 
 """"
 This views file renders the static content for the homepage and passes the static content to the homepage view
@@ -84,32 +84,15 @@ class Section3(Section):
         return context
     
 # ============================== Section 4 View/Content Views ============================== #
-    
-class Section4Content(BaseTemplateView):
-    template_name = 'info/home/TestimonialWrapper.html'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs) 
-        testimonial_views = []
-        testimonials = testimonial_data[:3]
-        for testimonial in testimonials:
-            testimonial_view = Testimonial.as_view(
-                image_link=testimonial['image_link'],
-                testimonial_name=testimonial['testimonial_name'],
-                testimonial_position=testimonial['testimonial_position'],
-                testimonial_text=testimonial['testimonial_text']
-            )
-            testimonial_html = testimonial_view(self.request).rendered_content
-            testimonial_views.append(testimonial_html)
-        
-        context['testimonials'] = testimonial_views
-        return context
-    
+class HomeTestimonials(TestimonialRow):
+    testimonial_array = testimonial_data[:3]
+
 class Section4(Section):
     section_style = 'dark'
     section_title = 'What People Say About CyberSkills2Work'
     section_button = 'View More'
-    section_content = Section4Content
+    section_content = HomeTestimonials
     section_button_link = '/'
 
 # ============================== Section 5 View/Content Views ============================== #

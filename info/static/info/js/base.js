@@ -7,5 +7,7 @@ import '../styles/imageslider.css';
 import '../styles/navbar.css';
 import '../styles/section.css';
 import '../styles/impact.css';
+import '../styles/employers.css';
+import '../styles/institutions.css';
 import './navbar.js';
 import './cardslider.js';

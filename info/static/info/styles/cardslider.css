@@ -48,5 +48,5 @@
     font-family: var(--body-font-family);
     font-size: .75em;
     font-weight: var(--body-font-weight);
-    line-height: var(--body-line-height);
+    line-height: var(--body-line-height)
 }
