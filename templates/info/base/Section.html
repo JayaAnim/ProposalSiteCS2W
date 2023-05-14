@@ -28,12 +28,7 @@
 
         {% if section_button %} 
             <div class="col d-flex justify-content-center p-0 pt-3 pb-3">
-                <button class="learn-more">
-                    <span class="circle" aria-hidden="true">
-                        <span class="icon arrow"></span>
-                    </span>
-                    <span class="button-text"> <a href="{{ section_button_link }}"> {{ section_button }} </a> </span>
-                </button>
+                {{ section_button }}
             </div>
         {% endif %}
 

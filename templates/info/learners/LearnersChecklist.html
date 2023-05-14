@@ -1,0 +1,17 @@
+{% load static %} 
+
+<div class="container">
+    <div class="info-learners-checklist-wrapper">
+        {% for item in checklist %}
+        <div class="col-lg-4 p-2">
+            <div class="info-learners-checklist-header">
+                <img class="info-checkmark me-2" src="{% static 'info/img/checkmark.png' %}"/>
+                <span class="info-learners-checklist-title">{{item.title}}</span>
+            </div>
+            <div class="info-learners-checklist-text-wrapper p-2">
+                <p class="info-learners-checklist-text">{{item.text|safe}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

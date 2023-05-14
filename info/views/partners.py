@@ -64,12 +64,15 @@ class Section3(Section):
     section_title = 'Additional Partners'
     section_content = Section3List
 
+class Section4Button(SimpleButton):
+    button_text = 'Contact Us'
+    button_link = '/'
+
 class Section4(Section):
     section_style = 'dark'
     section_title = 'Become a Partner'
     section_text = 'Are you interested in supporting CyberSkills2Work and improving the cybersecurity workforce. Reach out to us and tell us how you can help.'
-    section_button = 'Contact Us'
-    section_button_link = '/' 
+    section_button = Section4Button
 
 class Partners(SectionWrapper):
     sections = [Section1, Section2, Section3, Section4]

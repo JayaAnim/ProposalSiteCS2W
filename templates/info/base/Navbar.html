@@ -16,7 +16,7 @@
 
                     <div class="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul class="navbar-nav ms-auto py-4 py-lg-0">
-                            <li class="nav-item dropdown pe-4 pe-lg-0 me-0 me-lg-5">
+                            <li class="nav-item dropdown pe-4 pe-lg-0 me-0 me-lg-4 me-xl-5">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     About
                                 </a>
@@ -28,25 +28,26 @@
                                     <li><a class="dropdown-item" href="{% url 'info:Institutions' %}">Institutions Network</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item dropdown pe-4 pe-lg-0 me-0 me-lg-5">
+                            <li class="nav-item dropdown pe-4 pe-lg-0 me-0 me-lg-4  me-xl-5">
                                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     Learners
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item" href="{% url 'info:Learners' %}">Get Started</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'info:Aptitude' %}">Cyber Assessment</a></li>
                                     <li><a class="dropdown-item" href="{% url 'info:FAQ' %}">FAQ</a></li>
                                 </ul>
                             </li>
-                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-4  me-xl-5">
                                 <a class="nav-link" href="#">Programs</a>
                             </li>
-                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-4  me-xl-5">
                                 <a class="nav-link" href="#">Contact</a>
                             </li>
-                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
-                                <a class="nav-link" href="#">Apply</a>
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-4  me-xl-5">
+                                <a class="nav-link" href="{% url 'info:Apply' %}">Apply</a>
                             </li>
-                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-5">
+                            <li class="nav-item pe-4 pe-lg-0 me-0 me-lg-4  me-xl-5">
                                 <a class="nav-link" href="#">Sign in</a>
                             </li>
                         </ul>

@@ -9,23 +9,29 @@ class ImpactBanner(Banner):
 class MapContent(BaseTemplateView):
     template_name = "info/impact/ImpactMap.html"
 
+class Section1Button(SimpleButton):
+    button_text = 'More Info'
+    button_link = '/'
+
 
 class Section1(Section):
     section_style = 'light'
     section_title = 'Nine Institutions, 22 Training Programs'
-    section_button = 'More Info'
     section_content = MapContent
-    section_button_link = '/'
+    section_button = Section1Button
 
 class ImpactImages(BaseTemplateView):
     template_name = 'info/impact/ImpactImages.html'
+
+class Section2Button(SimpleButton):
+    button_text = 'Join Us'
+    button_link = '/'
 
 class Section2(Section):
     section_style = 'dark'
     section_title = 'Key Program Metrics'
     section_content = ImpactImages
-    section_button = 'Join Us'
-    section_button_link = '/'
+    section_button = Section2Button
     
 class Impact(SectionWrapper):
     banner = ImpactBanner

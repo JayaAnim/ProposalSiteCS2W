@@ -1,0 +1,13 @@
+.info-aptitude-img {
+    width: 80%;
+    height: auto;
+    margin: 25px;
+    border-radius: 25px;
+}
+
+.info-aptitude-role-title {
+    color: var(--shade-color-7);
+    border-bottom: 2px solid var(--shade-color-7);
+    font-size: 1.25em;
+    font-family: var(--body-font-family);
+}

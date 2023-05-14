@@ -28,8 +28,7 @@ class Section(BaseTemplateView):
     section_text is optional text displayed below title
     section_image is optional image to be displayed next to text
     section_content is optional rendered content from other static views to insert below text
-    section_button tells section whether to render a button and specifies the name of that button
-    section_button_link specifies link button leads to (uses django url tag)
+    section_button is button class to be rendered
     """
     template_name = 'info/base/Section.html'
     section_style = 'light'
@@ -38,7 +37,6 @@ class Section(BaseTemplateView):
     section_image = None
     section_content = None
     section_button = None
-    section_button_link = None
     
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -50,8 +48,10 @@ class Section(BaseTemplateView):
             context['section_content'] = self.section_content.as_view()(self.request).rendered_content
         else:
             context['section_content'] = self.section_content
-        context['section_button'] = self.section_button
-        context['section_button_link'] = self.section_button_link
+        if self.section_button:
+            context['section_button'] = self.section_button.as_view()(self.request).rendered_content
+        else:
+            context['section_button'] = self.section_button
 
         return context 
     
@@ -164,3 +164,27 @@ class Banner(BaseTemplateView):
         context['banner_sub_title'] = self.banner_sub_title
         return context 
 
+#Reusable unordered list to insert lists into content
+class UnorderedList(BaseTemplateView):
+    #list_items is array of strings to insert into list
+    template_name = 'info/base/UnorderedList.html'
+    list_items = []
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['list'] = self.list_items
+        return context
+    
+#Reusable info button to insert into sections
+class SimpleButton(BaseTemplateView):
+    #button_text is text to be displayed on button, it cannot be too long or else button will not format properly
+    #button_link is relative link button will lead to
+    template_name = 'info/base/SimpleButton.html'
+    button_text = ''
+    button_link = ''
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['button_text'] = self.button_text
+        context['button_link'] = self.button_link
+        return context

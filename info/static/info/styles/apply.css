@@ -1,0 +1,7 @@
+.info-apply-banner {
+    width: 100%;
+    height: 30%;
+    position: relative;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+}

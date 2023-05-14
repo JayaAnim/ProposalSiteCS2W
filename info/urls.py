@@ -14,6 +14,7 @@ from .views import (
     partners,
     resources,
     faq,
+    aptitude,
 )
 
 app_name = 'info'
@@ -30,6 +31,7 @@ urlpatterns = [
     path('apply', apply.Apply.as_view(), name='Apply'),
     path('privacy-policy', terms.PrivacyPolicy.as_view(), name='Privacy'),
     path('program-partners', partners.Partners.as_view(), name='Partners'),
+    path('cyber-aptitude', aptitude.Aptitude.as_view(), name='Aptitude'),
     path('resources', resources.Resources.as_view(), name='Resources'),
     path('faq', faq.FAQ.as_view(), name='FAQ'),
     path('tos', terms.TOS.as_view(), name='TOS'),

@@ -12,5 +12,8 @@ import '../styles/institutions.css';
 import '../styles/partners.css';
 import '../styles/resources.css';
 import '../styles/faq.css';
+import '../styles/learners.css';
+import '../styles/aptitude.css';
+import '../styles/apply.css';
 import './navbar.js';
 import './cardslider.js';

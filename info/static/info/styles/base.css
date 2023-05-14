@@ -3,3 +3,7 @@
     height: 70px;
     background: var(--shade-color-7);
 }
+
+.info-list-sub-container {
+    max-width: 768px;
+}

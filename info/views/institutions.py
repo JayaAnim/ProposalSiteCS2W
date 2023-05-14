@@ -45,13 +45,16 @@ class Section2(Section):
         context = super().get_context_data(**kwargs)
         context['section_content'] = self.section_content.as_view(cards=[Card1, Card2, Card3, Card4, Card5])(self.request).rendered_content
         return context
+    
+class Section3Button(SimpleButton):
+    button_text = 'Contact Us'
+    button_link = '/'
 
 class Section3(Section):
     section_style = 'light'
     section_title = 'Join Our Coalition'
     section_text = "Is your college or university making strides in the cybersecurity field as an NCAE-C institution? Are you developing or currently offering a cybersecurity workforce program? Join forces with like institutions in the CyberSkills2Work program. Take part in a national initiative that's helping to strengthen the cybersecurity workforce and secure information in critical infrastructure sectors."
-    section_button = 'Join Us'
-    section_button_link = '/'
+    section_button = Section3Button
     
 class Institutions(SectionWrapper):
     banner = EmployersBanner

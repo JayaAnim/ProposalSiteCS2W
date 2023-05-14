@@ -20,13 +20,16 @@ class Card3(Card):
     card_image = "info/img/cybersecurity-training-needs.jpg"
     card_text = "Reportedly, 95% of all cybersecurity breaches are due to human error and 69% of organizations indicate that their cybersecurity teams are understaffed. Source: IBM and ISACA"
 
+class Section1Button(SimpleButton):
+    button_text = 'Learn More'
+    button_link = '/'
+
 class Section1(Section):
     section_style = 'light'
     section_title = "Cybersecurity Today: A Call to Action"
     section_text = "CyberSkills2Work supporters hear the nation’s call for more cybersecurity in today’s ever-evolving cyberage. Cyberspace is continually advancing with more sophisticated ways to conduct business, socialize, and shop online. As it evolves, so does cybercrime. Cybersecurity analysts emphasize the need to take action on cybercriminals and develop a solid cyberdefense against computer crimes. Having skilled cybersecurity professionals at the frontline of cyberdefense helps protect networks, devices, and data from unlawful internet activity. According to <a href='https://www.cyberseek.org/' target='_blank'>CyberSeek</a>, the U.S. has a shortfall of about 597,767 cybersecurity professionals. More skilled professionals are needed to tackle the nation’s top cybersecurity challenges:"
     section_content = CardSlider
-    section_button = "Learn More" 
-    section_button_link = "/" 
+    section_button = Section1Button
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -34,14 +37,17 @@ class Section1(Section):
         return context
     
 # ============================== Section 2 View/Content Views ============================== #
+
+class Section2Button(SimpleButton):
+    button_text = 'Learn More'
+    button_link = '/'
     
 class Section2(Section):
     section_style = 'dark'
     section_title = "CyberSkills2Work Responds to the Call"
     section_text = "CyberSkills2Work, established in 2020, is responding to the nation’s call for more cybersecurity measures. It is building a strong labor force to fight cyberthreats to organizations across critical infrastructure sectors, including finance. CyberSkills2Work equips transitioning military members, veterans, and first responders with necessary skills to combat today’s top cybersecurity threats. The program, a network of America’s leading cybersecurity universities and Fortune 500 companies, provides training, career development, and job placement support to its learners. With in-person and virtual course options, CyberSkills2Work is one of the best free, online cybersecurity training programs in the USA. After completing the program, graduates receive certification and digital badges that document their earned credentials. They also are connected with employers and cybersecurity job opportunities to begin or advance their careers. CyberSkills2Work addresses an urgent demand to fill the cybersecurity workforce gap with skilled individuals who can help curtail cybercrimes."
     section_image = 'info/img/military-cybersecurity-person.jpg'
-    section_button = 'Learn More'
-    section_button_link = '/'
+    section_button = Section2Button
 
 # ============================== Section 3 View/Content Views ============================== #
 
@@ -71,12 +77,15 @@ class Image5(Image):
     image_link = 'info/img/program-impact-trained-professionals.png'
     image_description = 'Trained professionals impact'
 
+class Section3Button(SimpleButton):
+    button_text = 'Learn More'
+    button_link = '/'
+
 class Section3(Section):
     section_style = 'light'
     section_title = 'Program Impact'
     section_content = ImageSlider
-    section_button = 'Learn More'
-    section_button_link = '/'
+    section_button = Section3Button
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -88,12 +97,15 @@ class Section3(Section):
 class HomeTestimonials(TestimonialRow):
     testimonial_array = testimonial_data[:3]
 
+class Section4Button(SimpleButton):
+    button_text = 'View More'
+    button_link = '/'
+
 class Section4(Section):
     section_style = 'dark'
     section_title = 'What People Say About CyberSkills2Work'
-    section_button = 'View More'
     section_content = HomeTestimonials
-    section_button_link = '/'
+    section_button = Section4Button
 
 # ============================== Section 5 View/Content Views ============================== #
 
@@ -152,12 +164,15 @@ class Section5(Section):
 
 # ============================== Section 6 View/Content Views ============================== #
 
+class Section6Button(SimpleButton):
+    button_text = 'Programs'
+    button_link = '/'
+
 class Section6(Section):
     section_style = 'dark'
     section_title = 'Cybersecurity Work Roles, Pathways, and Training Institutions'
     section_text = 'Develop work-ready skills in the cybersecurity field. Choose from various different work roles for cybersecurity training. Follow the pathway of courses offered by CyberSkills2Work’s coalition of NCAE-C institutions.'
-    section_button = 'Programs'
-    section_button_link = '/'
+    section_button = Section6Button
 
 # ============================== Home View ============================== #
 

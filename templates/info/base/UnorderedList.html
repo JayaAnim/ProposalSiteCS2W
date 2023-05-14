@@ -1,0 +1,13 @@
+{% load static %} 
+
+<div class="container d-flex justify-content-center flex-wrap">
+    <div class="info-list-sub-container">
+        <ul>
+            {% for item in list %} 
+            <li class="p-1">
+                {{item}}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

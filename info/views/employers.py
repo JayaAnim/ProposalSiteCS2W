@@ -125,13 +125,16 @@ class Section2(Section):
     section_text = 'More than 40 companies and organizations make up our network of employers. It includes nonprofits, private technology firms, federal government agencies, global cybersecurity businesses, and world-renowned defense companies and banking institutions. Join us! Become a part of this growing network.'
     section_content = EmployersList
 
+class Section3Button(SimpleButton):
+    button_text = "Contact Us"
+    button_link = "/"
+
 
 class Section3(Section):
     section_style = 'light'
     section_title = 'Join Our Employers Network'
     section_text = 'Are you an employer interested in supporting CyberSkills2Work and hiring well-qualified cybersecurity professionals? Reach out to us and join our network.'
-    section_button = 'Join Us' 
-    section_button_link = '/'
+    section_button = Section3Button
 
 class Employers(SectionWrapper):
     banner = EmployersBanner
