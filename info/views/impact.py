@@ -26,15 +26,7 @@ class Section2(Section):
     section_content = ImpactImages
     section_button = 'Join Us'
     section_button_link = '/'
-
-class Impact(BaseTemplateView):
-    template_name = 'info/impact/ProgramImpact.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['banner'] = ImpactBanner.as_view()(self.request).rendered_content
-        sections = []
-        sections.append(Section1.as_view()(self.request).rendered_content)
-        sections.append(Section2.as_view()(self.request).rendered_content)
-        context['sections'] = sections
-        return context
+    
+class Impact(SectionWrapper):
+    banner = ImpactBanner
+    sections = [Section1, Section2]

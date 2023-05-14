@@ -133,15 +133,6 @@ class Section3(Section):
     section_button = 'Join Us' 
     section_button_link = '/'
 
-class Employers(BaseTemplateView):
-    template_name = 'info/Employers/Employers.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['banner'] = EmployersBanner.as_view()(self.request).rendered_content
-        sections = []
-        sections.append(Section1.as_view()(self.request).rendered_content)
-        sections.append(Section2.as_view()(self.request).rendered_content)
-        sections.append(Section3.as_view()(self.request).rendered_content)
-        context['sections'] = sections
-        return context
+class Employers(SectionWrapper):
+    banner = EmployersBanner
+    sections = [Section1, Section2, Section3]

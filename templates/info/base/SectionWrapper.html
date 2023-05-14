@@ -1,11 +1,13 @@
 {% extends 'info/base/Base.html' %}
 {% load static %} 
 
-{% block page_content %} 
-    {{ banner }} 
+{% block page_content %}
+
+    {% if banner %}
+        {{ banner }} 
+    {% endif %}
 
     {% for section in sections %} 
-        {{ section }}
+        {{ section }} 
     {% endfor %}
-
 {% endblock page_content %}

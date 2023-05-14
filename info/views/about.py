@@ -32,16 +32,6 @@ class Section4(Section):
     section_title = "Our History"
     section_text = "Follow the National Cybersecurity Workforce Development Program’s journey to becoming CyberSkills2Work. </br></br>12.8.21 - News release</br></br><a href='https://news.uwf.edu/uwf-receives-3-million-nsa-grant-to-expand-the-national-cybersecurity-workforce-development-program/' target='_blank'>UWF receives $3 million NSA grant to expand the National Cybersecurity Workforce Development Program</a></br></br>10.27.20 - News release</br></br><a href='https://news.uwf.edu/uwf-awarded-6-million-grant-to-lead-national-cybersecurity-workforce-development-program/' target='_blank'>UWF awarded $6 million grant to lead national cybersecurity workforce development program</a>"
 
-class About(BaseTemplateView):
-    template_name = 'info/about/About.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['banner'] = AboutBanner.as_view()(self.request).rendered_content
-        sections = []
-        sections.append(Section1.as_view()(self.request).rendered_content)
-        sections.append(Section2.as_view()(self.request).rendered_content)
-        sections.append(Section3.as_view()(self.request).rendered_content)
-        sections.append(Section4.as_view()(self.request).rendered_content)
-        context['sections'] = sections
-        return context
+class About(SectionWrapper):
+    banner = AboutBanner
+    sections = [Section1, Section2, Section3, Section4]

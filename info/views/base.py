@@ -54,6 +54,27 @@ class Section(BaseTemplateView):
         context['section_button_link'] = self.section_button_link
 
         return context 
+    
+#Reusable wrapper for pages using only a banner and multiple sections
+class SectionWrapper(BaseTemplateView):
+    """"
+    banner is banner class to render
+    sections is list of section class children to render
+    """
+    template_name = 'info/base/SectionWrapper.html'
+    banner = None
+    sections = []
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        if self.banner:
+            context['banner'] = self.banner.as_view()(self.request).rendered_content
+        rendered_sections = []
+        for section in self.sections:
+            rendered_sections.append(section.as_view()(self.request).rendered_content)
+        context['sections'] = rendered_sections
+        return context
+
 
 #Reusable cardslider that users to can flip through
 class CardSlider(BaseTemplateView):

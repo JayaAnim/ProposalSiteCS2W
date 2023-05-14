@@ -1,0 +1,20 @@
+{% load static %}
+
+<div class="info-accordion-container">
+    <div class="accordion accordion-flush" id="{{accordion_name}}">
+        {% for question in questions %}
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="{{question.heading_control}}">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#{{question.collapse_control}}" aria-expanded="false" aria-controls="{{question.collapse_control}}">
+                    {{question.question}}
+                </button>
+            </h2>
+            <div id="{{question.collapse_control}}" class="accordion-collapse collapse" aria-labelledby="{{question.heading_control}}" data-bs-parent="#{{accordion_name}}">
+                <div class="accordion-body">
+                    {{question.answer}}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>

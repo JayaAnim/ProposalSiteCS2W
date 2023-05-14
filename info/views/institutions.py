@@ -52,16 +52,7 @@ class Section3(Section):
     section_text = "Is your college or university making strides in the cybersecurity field as an NCAE-C institution? Are you developing or currently offering a cybersecurity workforce program? Join forces with like institutions in the CyberSkills2Work program. Take part in a national initiative that's helping to strengthen the cybersecurity workforce and secure information in critical infrastructure sectors."
     section_button = 'Join Us'
     section_button_link = '/'
-
-class Institutions(BaseTemplateView):
-    template_name = 'info/institutions/Institutions.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['banner'] = EmployersBanner.as_view()(self.request).rendered_content
-        sections = []
-        sections.append(Section1.as_view()(self.request).rendered_content)
-        sections.append(Section2.as_view()(self.request).rendered_content)
-        sections.append(Section3.as_view()(self.request).rendered_content)
-        context['sections'] = sections
-        return context
+    
+class Institutions(SectionWrapper):
+    banner = EmployersBanner
+    sections = [Section1, Section2, Section3]

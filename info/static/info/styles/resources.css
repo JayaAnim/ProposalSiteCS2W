@@ -1,0 +1,14 @@
+.info-resources-list-container {
+    max-width: 992px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.info-resources-list-container li {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}

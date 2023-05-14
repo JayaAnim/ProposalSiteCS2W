@@ -9,5 +9,8 @@ import '../styles/section.css';
 import '../styles/impact.css';
 import '../styles/employers.css';
 import '../styles/institutions.css';
+import '../styles/partners.css';
+import '../styles/resources.css';
+import '../styles/faq.css';
 import './navbar.js';
 import './cardslider.js';

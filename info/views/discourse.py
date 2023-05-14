@@ -125,15 +125,8 @@ class Section1(Section):
     section_text = "Knowing what people say about CyberSkills2Work might help you decide if it's worth your time or investment. Consider comments from people, nationwide, who are involved in different facets of the program. Get their firsthand thoughts about the program’s benefits."
     section_content = TestimonialWrapper
     
-class Discourse(BaseTemplateView):
-    template_name = 'info/discourse/Discourse.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        sections = []
-        context['banner'] = TestimonialBanner.as_view()(self.request).rendered_content
-        sections.append(Section1.as_view()(self.request).rendered_content) 
-        context['sections'] = sections
-        return context
+class Discourse(SectionWrapper):
+    banner = TestimonialBanner 
+    sections = [Section1]
         
     

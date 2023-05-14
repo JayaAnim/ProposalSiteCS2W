@@ -1,0 +1,8 @@
+{% load static %} 
+
+<ul class="list-group">
+    {% for item in list %} 
+    <li class="list-group-item {% if list_style == 'dark' %} info-partners-dark-list {% else %} info-partners-light-list {% endif %}">{{item}}</li>
+    {% endfor %}
+</ul>
+  

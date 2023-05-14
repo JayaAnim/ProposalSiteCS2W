@@ -1,4 +1,4 @@
-from .base import Section, BaseTemplateView
+from .base import Section, BaseTemplateView, SectionWrapper
 
 """"
 This views file renders the static pages of terms of service and privacy policy
@@ -55,25 +55,9 @@ class Section10(Section):
     section_style = 'dark'
     section_title = "Contact Information"
     section_text = "To get more information about our Privacy Policy, please contact us at info@cyberskills2work.org."
-
-class PrivacyPolicy(BaseTemplateView):
-    template_name = 'info/terms/TermsPage.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        sections = []
-        sections.append(Section1.as_view()(self.request).rendered_content)
-        sections.append(Section2.as_view()(self.request).rendered_content)
-        sections.append(Section3.as_view()(self.request).rendered_content)
-        sections.append(Section4.as_view()(self.request).rendered_content)
-        sections.append(Section5.as_view()(self.request).rendered_content)
-        sections.append(Section6.as_view()(self.request).rendered_content)
-        sections.append(Section7.as_view()(self.request).rendered_content)
-        sections.append(Section8.as_view()(self.request).rendered_content)
-        sections.append(Section9.as_view()(self.request).rendered_content)
-        sections.append(Section10.as_view()(self.request).rendered_content)
-        context['sections'] = sections
-        return context
+    
+class PrivacyPolicy(SectionWrapper):
+    sections = [Section1, Section2, Section3, Section4, Section5, Section6, Section7, Section8, Section9, Section10]
     
 # ============================== Terms of Service and Sections ============================== #
     
@@ -131,23 +115,6 @@ class Section21(Section):
     section_style = 'light'
     section_title = "Contact Us"
     section_text = "If you have questions regarding our Terms of Use, please contact us at info@cyberskills2work.org."
-
-class TOS(BaseTemplateView):
-    template_name = 'info/terms/TermsPage.html'
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        sections = []
-        sections.append(Section11.as_view()(self.request).rendered_content)
-        sections.append(Section12.as_view()(self.request).rendered_content)
-        sections.append(Section13.as_view()(self.request).rendered_content)
-        sections.append(Section14.as_view()(self.request).rendered_content)
-        sections.append(Section15.as_view()(self.request).rendered_content)
-        sections.append(Section16.as_view()(self.request).rendered_content)
-        sections.append(Section17.as_view()(self.request).rendered_content)
-        sections.append(Section18.as_view()(self.request).rendered_content)
-        sections.append(Section19.as_view()(self.request).rendered_content)
-        sections.append(Section20.as_view()(self.request).rendered_content)
-        sections.append(Section21.as_view()(self.request).rendered_content)
-        context['sections'] = sections
-        return context
+    
+class TOS(SectionWrapper):
+    sections = [Section11, Section12, Section13, Section14, Section15, Section16, Section17, Section18, Section19, Section20, Section21]
