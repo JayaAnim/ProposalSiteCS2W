@@ -101,11 +101,12 @@ h5 {
 
 .info-checkmark {
     height: 35px;
-    width: auto;
+    width: 35px;
 }
 
+/* ================ Simple button css =============== */
 
-button {
+button.learn-more {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -199,3 +200,48 @@ button:hover .button-text, button:hover .button-text a {
 button.learn-more .button-text {
     white-space: nowrap;
 }
+
+/* =============== Apply Button css =============== */
+
+.pill-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .pill-button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #e84820;
+    font-family: var(--body-font-family);
+    color: white;
+    border: none;
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .pulse-effect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background-color: #f06643;
+    opacity: 0;
+    animation: pulse 2s infinite;
+    z-index: 0;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }

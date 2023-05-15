@@ -4,4 +4,32 @@
     position: relative;
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-apply-check-item {
+    max-width: 992px;
+    direction: column;
+    padding: 0 10px;
+}
+
+.info-apply-check-item-title {
+    color: var(--shade-color-7);
+    font-size: 1.25em;
+    font-family: var(--title-font-family);
+}
+
+.info-apply-checkmark {
+    display: inline;
+    padding: 0;
+}
+
+.info-apply-check-item-text {
+    width: 100%;
+    padding-left: 40px;
+    font-family: var(--body-font-family);
+    font-size: .95em;
 }

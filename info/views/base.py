@@ -188,3 +188,13 @@ class SimpleButton(BaseTemplateView):
         context['button_text'] = self.button_text
         context['button_link'] = self.button_link
         return context
+    
+#Reusable apply button to insert into sections
+class ApplyButton(BaseTemplateView):
+    template_name = 'info/base/ApplyButton.html'
+    button_text = ''
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['button_text'] = self.button_text
+        return context

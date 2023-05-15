@@ -1,0 +1,17 @@
+{% load static %}
+
+<div class="container">
+    {% for item in checklist %}
+    <div class="row d-flex justify-content-center align-items-center mt-2">
+        <div class="info-apply-check-item p-0">
+            <div class="col-12">
+                <img src="{% static 'info/img/checkmark.png' %}" class="info-apply-checkmark info-checkmark" alt="check mark"/>
+                <span class="info-apply-check-item-title p-0">{{item.title}}
+            </div>
+            <div class="info-apply-check-item-text">
+                <span>{{item.text}}</span>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
